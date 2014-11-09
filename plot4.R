@@ -10,10 +10,10 @@ par(mfrow=c(2,2))
 with(data,{
   plot(Global_active_power, ylab="Global Active Power", type="l"
        , xlab="", xaxt="n")
-  axis(1, at=c(1,nrow(data)/2,nrow(data)), labels=c("Thu","Fri","Sat"), las=2)
+  axis(1, at=c(1,nrow(data)/2,nrow(data)), labels=c("Thu","Fri","Sat"), las=1)
   
   plot(Voltage, ylab="Voltage", xlab="datetime", type="l",xaxt="n")
-  axis(1, at=c(1,nrow(data)/2,nrow(data)), labels=c("Thu","Fri","Sat"), las=2)
+  axis(1, at=c(1,nrow(data)/2,nrow(data)), labels=c("Thu","Fri","Sat"), las=1)
   
   plot(Sub_metering_1, ylab="Energy sub metering", type="l", col="black"
        , xlab="", xaxt="n")
@@ -21,12 +21,12 @@ with(data,{
         , xlab="", xaxt="n", yaxt="n")
   lines(Sub_metering_3, ylab="", type="l",col="blue"
         , xlab="", xaxt="n", yaxt="n")
-  axis(1, at=c(1,nrow(data)/2,nrow(data)), labels=c("Thu","Fri","Sat"), las=2)
+  axis(1, at=c(1,nrow(data)/2,nrow(data)), labels=c("Thu","Fri","Sat"), las=1)
   legend('topright', names(data)[7:9], lty=1, col=c("black","red","blue"), bty='n', cex=.25)
   
   plot(Global_reactive_power, ylab="Global_reactive_power", type="l"
        , xlab="datetime", xaxt="n")
-  axis(1, at=c(1,nrow(data)/2,nrow(data)), labels=c("Thu","Fri","Sat"), las=2)
+  axis(1, at=c(1,nrow(data)/2,nrow(data)), labels=c("Thu","Fri","Sat"), las=1)
 })
 
 dev.copy(png,file="plot4.png", width=480, height=480)

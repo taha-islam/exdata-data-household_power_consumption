@@ -8,6 +8,6 @@ data$Date <- strptime(data$Date,"%d/%m/%Y")
 
 plot(data$Global_active_power, ylab="Global Active Power (Kilowatts)", type="l"
      , xlab="", xaxt="n")
-axis(1, at=c(1,nrow(data)/2,nrow(data)), labels=c("Thu","Fri","Sat"), las=2)
+axis(1, at=c(1,nrow(data)/2,nrow(data)), labels=c("Thu","Fri","Sat"), las=1)
 dev.copy(png,file="plot2.png", width=480, height=480)
 dev.off()
